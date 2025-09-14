@@ -295,7 +295,6 @@ export class Alist extends TypedEmitter<AlistEvents> {
         uploadCancelError.name = "AbortError";
         fileStream.destroy();
         req?.destroy(uploadCancelError);
-        this.logger.info("上传已取消");
         this.emit("canceled", "上传已取消");
       },
     };
